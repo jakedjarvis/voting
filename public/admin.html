@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"><script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+<script src="javascripts/app.js"></script>
+
+ <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+
+
+</head>
+
+
+<body>
+
+    <div ng-app='app' ng-controller='adminCtrl' class='container'>
+        
+        <h1>Administrative Interface</h1>
+
+        <input ng-model="name" type="text" value="Candidate's Name"/><button ng-click="addCandidate()" class="btn">Add to List</button>
+
+
+        <div ng-repeat="candidate in candidates" id="classInfo">
+            <h5>
+                <span ng-click="deleteCandidate(candidate)" class="glyphicon glyphicon-remove"></span>
+                Name: {{candidate.Name}} - Votes: {{candidate.Votes}}
+            </h5>
+
+
+
+        </div> <!--end of ng-repeat div-->
+
+
+    </div> <!--end of ng-app div-->
+
+
+
+
+
+</body>
+</html>

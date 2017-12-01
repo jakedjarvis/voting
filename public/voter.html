@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"><script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/stylesheets/style.css">
+
+<script src="javascripts/app.js"></script>
+
+ <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+
+</head>
+
+
+<body>
+
+    <div ng-app='app' ng-controller='voterCtrl' class='container'>
+        
+        <h1>Voter Interface</h1>
+
+
+        <div ng-repeat="candidate in candidates" id="classInfo">
+            <h5>
+                <div class="form-check">
+                    <label class="form-check-label">
+                    <input ng-model="candidate.checked" type="checkbox" class="form-check-input">
+                        {{candidate.Name}}
+                    </label>
+                </div>
+            </h5> 
+
+
+        </div> <!--end of ng-repeat div-->
+
+        <button ng-click="incrementVote()" type="button" class="btn">Submit Votes</button>
+
+    </div> <!--end of ng-app div-->
+
+
+
+
+
+</body>
+</html>
